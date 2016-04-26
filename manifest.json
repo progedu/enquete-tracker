@@ -1,0 +1,22 @@
+{
+  "name": "N予備校の授業中アンケートの自動保存",
+  "description": "ボタンを押すと、N予備校の授業のアンケート結果を保存し始めます。また、LocalStrageを利用しているため、最読み込み後に実行することで前の状態を復元します。",
+  "version": "1.0",
+  "permissions": [
+    "activeTab"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_title": "前の状態を復元して、アンケート結果を自動保存しはじめる"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://www.nnn.ed.nico/*"],
+      "js": ["jquery-2.2.3.min.js"]
+    }
+  ],
+  "manifest_version": 2
+}
