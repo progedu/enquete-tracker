@@ -1,11 +1,13 @@
 (function () {
+  'use strict';
   var keysKey = '[enquete-keys] ' + location.pathname;
   var s = localStorage;
 
   // CSV書き出しエリア作成
-  $('.post-panel').append(
-    '<p>アンケート結果を自動取得中...。(Excelなどに貼り付け可能な形式)</p>' +
-    '<textarea id="enquete-csv"></textarea>');
+  $('.component-lesson-left-column').append(
+    '<div><p>アンケート結果を自動取得中...。(Excelなどに貼り付け可能な形式)</p>' +
+    '<textarea id="enquete-csv"></textarea></div>');
+
   // 0.1秒置きにアンケート結果確認
   function track() {
     var question = $('div.question').text();

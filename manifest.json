@@ -1,9 +1,14 @@
 {
   "name": "N予備校の授業中アンケートの自動保存",
-  "description": "ボタンを押すと、N予備校の授業のアンケート結果を保存し始めます。また、LocalStrageを利用しているため、再読み込み後に実行することで前の状態を復元します。",
-  "version": "1.1",
+  "description": "自動的にN予備校の授業のアンケート結果を保存し始めます。止めたいときは拡張を有効をオフにしてください。また、LocalStrageを利用しているため、再読み込み後に実行することで前の状態を復元します。",
+  "version": "1.2",
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "webNavigation",
+    "http://www.nnn.ed.nico/*",
+    "https://www.nnn.ed.nico/*",
+    "http://nnn.ed.nico/*",
+    "https://nnn.ed.nico/*"
   ],
   "background": {
     "scripts": [
@@ -11,17 +16,14 @@
     ],
     "persistent": false
   },
-  "browser_action": {
-    "default_icon": "images/en_icon19.png",
-    "default_title": "N予備校の授業中アンケートの自動保存"
-  },
   "content_scripts": [
     {
       "matches": [
-        "http://www.nnn.ed.nico/*"
+        "*://www.nnn.ed.nico/*",
+        "*://nnn.ed.nico/*"
       ],
       "js": [
-        "jquery-2.2.3.min.js"
+        "jquery-3.1.0.min.js"
       ]
     }
   ],
