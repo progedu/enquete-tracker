@@ -4,7 +4,7 @@
   var s = localStorage;
 
   // CSV書き出しエリア作成
-  $('.component-lesson-left-column').append(
+  $('#root > div > div > div > div > div > div:eq(1)').append(
     '<div><p>アンケート結果を自動取得中...。(Excelなどに貼り付け可能な形式)</p>' +
     '<textarea id="enquete-csv"></textarea></div>');
 
