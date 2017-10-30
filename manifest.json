@@ -1,7 +1,7 @@
 {
   "name": "N予備校の授業中アンケートの自動保存",
   "description": "自動的にN予備校の授業のアンケート結果を保存し始めます。止めたいときは拡張を有効をオフにしてください。また、LocalStrageを利用しているため、再読み込み後に実行することで前の状態を復元します。",
-  "version": "1.3",
+  "version": "1.4",
   "permissions": [
     "activeTab",
     "webNavigation",
